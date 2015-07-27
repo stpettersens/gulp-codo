@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 
 gulp.task('doc', function () {
 	return gulp.src('*.coffee')
-	.pipe(codo('./doc')) // removeMarkdown(ext, options)
+	.pipe(codo('./doc')) // codo() defaults to './doc'
 	.pipe(gulp.dest('dist'));
 });
 ```
