@@ -1,4 +1,4 @@
-### gulp-remove-markdown
+### gulp-codo
 > Gulp plug-in to generate documentation with [codo](https://github.com/coffeedoc/codo).
 
 [![Build Status](https://travis-ci.org/stpettersens/gulp-remove-markdown.png?branch=master)](https://travis-ci.org/stpettersens/gulp-remove-markdown)
