@@ -7,6 +7,12 @@
 
 ##### Install:
 
+First install codo globally:
+
+	$ npm install -g codo
+
+Then:
+
     $ npm install --save-dev gulp-codo
 
 ##### Usage:
@@ -16,16 +22,17 @@ var gulp = require('gulp'),
 
 gulp.task('doc', function () {
 	return gulp.src('*.coffee')
-	.pipe(codo('./doc')) // codo() defaults to './doc'
-	.pipe(gulp.dest('dist'));
+	.pipe(codo()) // codo(name, title, readme, dir)
 });
 ```
 
-<!--##### Options
+##### Options:
 
-* **ext: string** : File extension to use for Markdown stripped output.
-* **options: Object** : Options [supported by remove-markdown](http://bit.ly/1LrOKG4).-->
+* **name: string** : Project name for generated documenation (e.g. *Greeter*).
+* **title: string** : Title for generated documentation (e.g. *Greeter documentation*).
+* **readme: string**: : Readme to use for generated documentation (e.g. *greeter.md*).
+* **dir: string** : Output directory for documentation (e.g. *./doc*).
 
-##### Attribution
+##### Attribution:
 
 * This plug-in uses [codo](https://github.com/coffeedoc/codo)
