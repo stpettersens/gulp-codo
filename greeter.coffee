@@ -1,9 +1,7 @@
 class Greeter 
 
 	# Greeter implements a greeting messenger.
-	#
 	# @param [String] name Name to greet.
-	#
 	constructor: (name) ->
 		@name =name
 
