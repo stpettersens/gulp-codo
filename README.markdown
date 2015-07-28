@@ -32,12 +32,12 @@ gulp.task('doc', function () {
 
 ##### Options:
 
-* options: Object : Object containing following options:
+* **options: Object** : Object containing any of the following options:
 
-* **name: string** : Project name for generated documenation (e.g. *Greeter*).
-* **title: string** : Title for generated documentation (e.g. *Greeter documentation*).
-* **readme: string**: : Readme to use for generated documentation (e.g. *greeter.md*).
-* **dir: string** : Output directory for documentation (e.g. *./doc*).
+  * **name: string** : Project name for generated documenation (e.g. *Greeter*).
+  * **title: string** : Title for generated documentation (e.g. *Greeter documentation*).
+  * **readme: string**: : Readme to use for generated documentation (e.g. *greeter.md*).
+  * **dir: string** : Output directory for documentation (e.g. *./doc*).
 
 ##### Attribution:
 
