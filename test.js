@@ -1,5 +1,5 @@
 /*
-Test gulp-remove-markdown.
+Test gulp-codo.
 */
 'use strict';
 var assert = require('assert'),
