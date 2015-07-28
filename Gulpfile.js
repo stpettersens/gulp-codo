@@ -32,8 +32,6 @@ gulp.task('readme', function() {
 gulp.task('clean', function() {
   if(fs.existsSync(readme + txt))
     fs.unlinkSync('README.txt');
-  if(fs.existsSync(readme + log))
-    fs.unlinkSync('README.log');
 });
 
 gulp.task('default', ['test'], function(){});

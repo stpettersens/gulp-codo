@@ -24,7 +24,7 @@ describe('Test gulp-codo plug-in', function() {
 
     stream.write(new gutil.File({
       path: 'helloworld.coffee',
-      contents: new Buffer('#\n# Hello World\n#\nhelloworld ->\n//TODO\n')
+      contents: new Buffer('#\n# Hello World\n#\nhelloworld ->\nconsole.log("HW!");\n')
     }));
 
     stream.end();
