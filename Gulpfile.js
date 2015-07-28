@@ -15,10 +15,11 @@ var txt = '.txt';
 
 gulp.task('test', function() {
   return gulp.src('*.coffee')
-  .pipe(codo(
-    'Greeter',
-    'Greeter documentation',
-    'greeter.md'));
+  .pipe(codo({
+    name: 'Greeter',
+    title: 'Greeter Documentation',
+    readme: 'greeter.md'
+  }));
 });
 
 gulp.task('readme', function() {

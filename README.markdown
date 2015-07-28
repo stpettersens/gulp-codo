@@ -22,11 +22,17 @@ var gulp = require('gulp'),
 
 gulp.task('doc', function () {
 	return gulp.src('*.coffee')
-	.pipe(codo()) // codo(name, title, readme, dir)
+	.pipe(codo({
+		name: 'Project',
+		title: 'Project Documentation',
+		readme: 'project.md'
+	}));
 });
 ```
 
 ##### Options:
+
+* options: Object : Object containing following options:
 
 * **name: string** : Project name for generated documenation (e.g. *Greeter*).
 * **title: string** : Title for generated documentation (e.g. *Greeter documentation*).

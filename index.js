@@ -3,16 +3,16 @@ var gutil = require('gulp-util'),
   through = require('through2'),
      exec = require('child_process').exec;
 
-function invokeCodo(file, name, title, readme, dir, cb) {
+function invokeCodo(file, opts, cb) { // name, title, readme, dir
   var options = '';
-  if(name != null) options += ' --name "' + name + '"';
-  if(title != null) options += ' --title "' + title + '"';
-  if(readme != null) options += ' --readme ' + readme;
-  if(dir != null) options += ' --output ' + dir;
+  if(opts.hasOwnProperty('name')) options += ' --name "' + opts.name + '"';
+  if(opts.hasOwnProperty('title')) options += ' --title "' + opts.title + '"';
+  if(opts.hasOwnProperty('readme')) options += ' --readme ' + opts.readme;
+  if(opts.hasOwnProperty('dir')) options += ' --output ' + opts.dir;
   return cb(null, exec('codo ' + options, function(){}));
 }
 
-module.exports = function(name, title, readme, dir) {
+module.exports = function(options) { // name, title, readme, dir
   return through.obj(function(file, enc, cb) {
     if(file.isNull()) {
       cb(null);
@@ -24,7 +24,7 @@ module.exports = function(name, title, readme, dir) {
       return;
     }
 
-    invokeCodo(file.path, name, title, readme, dir, function(err) {
+    invokeCodo(file.path, options, function(err) { // name, title, readme, dir
       if(err) {
         cb(new gutil.PluginError('gulp-codo', err, {fileName: file.path}));
         return;
