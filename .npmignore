@@ -1,6 +1,8 @@
 doc/
 node_modules/
 README.markdown
+greeter.coffee
+greeter.md
 .gitignore
 .npmignore
 .travis.yml
