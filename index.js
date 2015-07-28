@@ -5,18 +5,17 @@ var gutil = require('gulp-util'),
 
 function invokeCodo(file, name, title, readme, dir, cb) {
   var options = '';
-  if(file == null) file = '';
   if(name != null) options += ' --name "' + name + '"';
   if(title != null) options += ' --title "' + title + '"';
   if(readme != null) options += ' --readme ' + readme;
   if(dir != null) options += ' --output ' + dir;
-  return cb(null, exec('codo ' + options + ' ' + file, function(){}));
+  return cb(null, exec('codo ' + options, function(){}));
 }
 
 module.exports = function(name, title, readme, dir) {
   return through.obj(function(file, enc, cb) {
     if(file.isNull()) {
-      cb(null, file);
+      cb(null);
       return;
     }
 
@@ -25,13 +24,12 @@ module.exports = function(name, title, readme, dir) {
       return;
     }
 
-    invokeCodo(file.path, name, title, readme, dir, function(err, data) {
+    invokeCodo(file.path, name, title, readme, dir, function(err) {
       if(err) {
         cb(new gutil.PluginError('gulp-codo', err, {fileName: file.path}));
         return;
       }
-      file.contents = new Buffer(data);
-      cb(null, file);
+      cb(null);
     });
   });
 };

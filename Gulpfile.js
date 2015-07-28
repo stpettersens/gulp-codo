@@ -14,7 +14,7 @@ var md = '.markdown';
 var txt = '.txt';
 
 gulp.task('test', function() {
-  return gulp.src('greeter.coffee')
+  return gulp.src('*.coffee')
   .pipe(codo(
     'Greeter',
     'Greeter documentation',
