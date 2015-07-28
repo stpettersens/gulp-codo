@@ -16,8 +16,8 @@ var txt = '.txt';
 gulp.task('test', function() {
   return gulp.src('greeter.coffee')
   .pipe(codo(
-    'Greeter', 
-    'Greeter documentation', 
+    'Greeter',
+    'Greeter documentation',
     'greeter.md'));
 });
 

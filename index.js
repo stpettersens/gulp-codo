@@ -5,11 +5,12 @@ var gutil = require('gulp-util'),
 
 function invokeCodo(file, name, title, readme, dir, cb) {
   var options = '';
+  if(file == null) file = '';
   if(name != null) options += ' --name "' + name + '"';
   if(title != null) options += ' --title "' + title + '"';
   if(readme != null) options += ' --readme ' + readme;
   if(dir != null) options += ' --output ' + dir;
-  return cb(null, exec('codo ' + file + options, function(){}));
+  return cb(null, exec('codo ' + options + ' ' + file, function(){}));
 }
 
 module.exports = function(name, title, readme, dir) {
