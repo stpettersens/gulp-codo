@@ -7,7 +7,7 @@
 
 ##### Install:
 
-First install codo globally:
+First install [codo](https://www.npmjs.com/package/codo) globally:
 
 	$ npm install -g codo
 
@@ -23,9 +23,9 @@ var gulp = require('gulp'),
 gulp.task('doc', function () {
 	return gulp.src('*.coffee')
 	.pipe(codo({
-		name: 'Project',
-		title: 'Project Documentation',
-		readme: 'project.md'
+		name: 'Greeter',
+		title: 'Greeter documentation',
+		readme: 'greeter.md'
 	}));
 });
 ```
@@ -37,7 +37,3 @@ gulp.task('doc', function () {
   * **title: string** : Title for generated documentation (e.g. *Greeter documentation*).
   * **readme: string**: : Readme to use for generated documentation (e.g. *greeter.md*).
   * **dir: string** : Output directory for documentation (e.g. *./doc*).
-
-##### Attribution:
-
-* This plug-in uses [codo](https://github.com/coffeedoc/codo)
