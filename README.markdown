@@ -50,6 +50,6 @@ gulp.task('doc', function () {
 * [Sam Saint-Pettersen](https://github.com/stpettersens)
 * [Joe Hildebrand](https://github.com/hildjj)
 
-#### License
+##### License
 
 [MIT](https://opensource.org/licenses/MIT)
