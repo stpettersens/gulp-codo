@@ -44,3 +44,11 @@ gulp.task('doc', function () {
 	* **private: boolean** : Show privates
 	* **verbose: boolean** : Show parsing errors
 	* **extra: string or Array** : Add extra files (e.g. *['LICENSE.md']*)
+
+##### Authors
+
+[Sam Saint-Pettersen](https://github.com/stpettersens), [Joe Hildebrand](https://github.com/hildjj)
+
+#### License
+
+[MIT](https://opensource.org/licenses/MIT)
