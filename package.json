@@ -8,6 +8,12 @@
     "name": "Sam Saint-Pettersen",
     "email": "s.stpettersen+github@gmail.com"
   },
+  "contributors": [
+    {
+      "name": "Joe Hildebrand",
+      "email": "joe-github@cursive.net"
+    }
+  ],
   "engines": {
     "node": ">=0.10.0"
   },

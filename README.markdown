@@ -21,11 +21,12 @@ var gulp = require('gulp'),
     codo = require('gulp-codo');
 
 gulp.task('doc', function () {
-	return gulp.src('*.coffee')
+	return gulp.src('*.coffee', {read: false})
 	.pipe(codo({
 		name: 'Greeter',
 		title: 'Greeter documentation',
-		readme: 'greeter.md'
+		readme: 'greeter.md',
+		extra: 'LICENSE.md'
 	}));
 });
 ```
@@ -37,3 +38,9 @@ gulp.task('doc', function () {
   * **title: string** : Title for generated documentation (e.g. *Greeter documentation*).
   * **readme: string**: : Readme to use for generated documentation (e.g. *greeter.md*).
   * **dir: string** : Output directory for documentation (e.g. *./doc*).
+	* **theme: string** : The theme to be used (e.g. *default*).
+	* **undocumented: boolean** : List undocumented objects
+	* **closure: boolean** : Try to parse closure-like block comments
+	* **private: boolean** : Show privates
+	* **verbose: boolean** : Show parsing errors
+	* **extra: string or Array** : Add extra files (e.g. *['LICENSE.md']*)
