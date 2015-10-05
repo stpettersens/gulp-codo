@@ -47,7 +47,8 @@ gulp.task('doc', function () {
 
 ##### Authors
 
-[Sam Saint-Pettersen](https://github.com/stpettersens), [Joe Hildebrand](https://github.com/hildjj)
+* [Sam Saint-Pettersen](https://github.com/stpettersens)
+* [Joe Hildebrand](https://github.com/hildjj)
 
 #### License
 
