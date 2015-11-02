@@ -1,5 +1,5 @@
 ### gulp-codo
-> Gulp plug-in to generate documentation with [codo](https://github.com/coffeedoc/codo).
+> Gulp plug-in to generate documentation for CoffeeScript with [codo](https://github.com/coffeedoc/codo).
 
 [![Build Status](https://travis-ci.org/stpettersens/gulp-codo.png?branch=master)](https://travis-ci.org/stpettersens/gulp-codo)
 [![npm version](https://badge.fury.io/js/gulp-codo.svg)](http://npmjs.com/package/gulp-codo)
