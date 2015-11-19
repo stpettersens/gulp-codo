@@ -45,7 +45,7 @@ gulp.task('doc', function () {
   * **verbose: boolean** : Show parsing errors
   * **extra: string or Array** : Add extra files (e.g. *['LICENSE.md']*)
 
-##### Authors
+##### Authors / Contributors
 
 * [Sam Saint-Pettersen](https://github.com/stpettersens)
 * [Joe Hildebrand](https://github.com/hildjj)
